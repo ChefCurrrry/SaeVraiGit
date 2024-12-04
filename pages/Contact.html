@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+    <link rel="stylesheet" href="../css/Contact.css">
+    <link rel="stylesheet" href="../css/footerCSS.css">
+    <script src="../js/Contact.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="Accueil.html">
+                <img src="../img/logo-association.png" alt="Logo">
+            </a>
+        </div>
+        <button class="menu-toggle" aria-label="Menu">
+            ☰ <!-- Icône du menu burger -->
+        </button>
+        <div class="containerBouton">
+            <button class="navBouton" onclick="window.location.href='Accueil.html';">Accueil</button>
+            <button class="navBouton" onclick="window.location.href='Qui_Sommes_Nous.html';">Qui sommes nous ?</button>
+            <button class="navBouton" onclick="window.location.href='Cancer_Larynx.html';">Le cancer du larynx</button>
+            <button class="navBouton" onclick="window.location.href='Contact.html';">Contactez-nous</button>
+            <button class="navBouton" onclick="window.location.href='Connexion.html';">Connexion</button>
+        </div>
+    </nav>
+
+
+
+
+    <div class="spacer"></div>
+
+
+    <div class="main">
+        <section class="contact-header text-center">
+            <h1>Contactez-nous</h1>
+            <p>Vous avez des questions ? N'hésitez pas à nous contacter ! Voici nos informations !</p>
+        </section>
+
+        <section class="contact-info container my-5">
+            <div class="row">
+                <!-- Informations de contact -->
+                <div class="col-md-6 contact-details">
+                    <h2>Restez en contact</h2>
+                    <p>Nous sommes à votre disposition pour répondre à toutes vos questions. N'hésitez pas à nous écrire ou à nous contacter via les informations ci-dessous.</p>
+
+                    <div class="info-item my-3">
+                        <img src="../img/locContact.png"></img>
+                        <p><strong>Adresse</strong><br>181 avenue Daumesnil 75012 PARIS</p>
+                    </div>
+
+                    <div class="info-item my-3">
+                        <img src="../img/telephoneContact.png"></img>
+                        <p><strong>Numéro de téléphone</strong><br>01 42 33 16 86</p>
+                    </div>
+
+                    <div class="info-item my-3">
+                        <img src="../img/emailContact.png"></img>
+                        <p><strong>E-Mail</strong><br>info@mutiles-voix.com</p>
+                    </div>
+
+                    <div class="social-media mt-4">
+                        <p><strong>Suivez-nous sur nos réseaux :</strong></p>
+                        <a href="https://www.facebook.com/de.Lorraine.haute.Marne/"><img class="fcbk" src="../img/fcbk.png"></img></a>
+                    </div>
+                </div>
+                <div class="spacer2"></div>
+                <!-- Formulaire de contact -->
+                <div class="col-md-6 contact-form">
+                    <h2>Envoyer un message</h2>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <input type="text" name="nom" class="form-control" placeholder="Nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Adresse e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer3"></div>
+
+        <div id="footer-placeholder"></div>
+
+        <script>
+            // Charger le fichier footer.html dans le div avec l'id "footer-placeholder"
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Erreur lors du chargement du footer :", error));
+        </script>
+    </div>
+</body>
+</html>

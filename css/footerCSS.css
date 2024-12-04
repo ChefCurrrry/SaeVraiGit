@@ -1,0 +1,67 @@
+footer {
+    background-color: #f4f7fb; /* Couleur de fond */
+    padding: 20px 40px;
+    color: #333;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permet d'adapter les sections sur petit écran */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+    min-width: 200px; /* Assure un minimum de largeur par section */
+}
+
+.footer-logo {
+    width: 50px; /* Taille du logo */
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #4267B2; /* Couleur Facebook */
+    font-size: 14px;
+}
+.fcbk{
+    width: 30px;
+    height: 30px;
+}
+.logoFooter{
+    width: 100%;
+}
+.footer-section ul {
+    display: flex;
+    flex-direction: column; /* Pour aligner les liens verticalement */
+    gap: 10px; /* Espace de 10px entre chaque lien */
+}

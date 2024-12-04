@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le cancer du larynx</title>
+    <link rel="stylesheet" href="../css/Cancer_Larynx.css">
+    <link rel="stylesheet" href="../css/footerCSS.css">
+    <script src="../js/Cancer_Larynx.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="Accueil.html">
+                <img src="../img/logo-association.png" alt="Logo">
+            </a>
+        </div>
+        <button class="menu-toggle" aria-label="Menu">
+            ☰ <!-- Icône du menu burger -->
+        </button>
+        <div class="containerBouton">
+            <button class="navBouton" onclick="window.location.href='Accueil.html';">Accueil</button>
+            <button class="navBouton" onclick="window.location.href='Qui_Sommes_Nous.html';">Qui sommes nous ?</button>
+            <button class="navBouton" onclick="window.location.href='Cancer_Larynx.html';">Le cancer du larynx</button>
+            <button class="navBouton" onclick="window.location.href='Contact.html';">Contactez-nous</button>
+            <button class="navBouton" onclick="window.location.href='Connexion.html';">Connexion</button>
+        </div>
+    </nav>
+
+
+    <div class="spacer"></div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Charger le fichier footer.html dans le div avec l'id "footer-placeholder"
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Erreur lors du chargement du footer :", error));
+    </script>
+</body>
+</html>
