@@ -1,3 +1,11 @@
+const menuToggle = document.querySelector('.menu-toggle');
+const containerBouton = document.querySelector('.containerBouton');
+
+menuToggle.addEventListener('click', () => {
+    containerBouton.classList.toggle('show'); // Affiche ou masque le menu
+});
+
+
 // Sélectionne tous les boutons de navigation ayant la classe .navBouton
 const boutonsNav = document.querySelectorAll('.navBouton')
 // Récupère le titre de la page active (ce qui est affiché dans l'onglet)
@@ -11,12 +19,7 @@ boutonsNav.forEach(bouton => {
         bouton.classList.add('active')
     }
 })
-const menuToggle = document.querySelector('.menu-toggle');
-const containerBouton = document.querySelector('.containerBouton');
 
-menuToggle.addEventListener('click', () => {
-    containerBouton.classList.toggle('show'); // Affiche ou masque le menu
-});
 
 // Sélectionne tous les éléments ayant la classe .circle (cercles interactifs)
 const boutonsInfo = document.querySelectorAll('.circle')

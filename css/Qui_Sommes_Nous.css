@@ -244,6 +244,8 @@ h1 {
         width: 200px;
         padding: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+
     }
 
     .containerBouton.show {
@@ -263,12 +265,6 @@ h1 {
         margin: 0 auto;
     }
 
-    .containerBouton {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        justify-content: center;
-    }
 
     /* Conteneur principal */
     .container {
