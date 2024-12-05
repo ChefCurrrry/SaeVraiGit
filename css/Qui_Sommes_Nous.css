@@ -255,16 +255,6 @@ h1 {
     .menu-toggle {
         display: block; /* Affiche le bouton burger */
     }
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px;
-    }
-
-    .navbar-logo img {
-        margin: 0 auto;
-    }
-
 
     /* Conteneur principal */
     .container {
