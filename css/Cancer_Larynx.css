@@ -88,3 +88,273 @@ body {
         display: block; /* Affiche le bouton burger */
     }
 }
+
+
+/* Section Virus */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section principale */
+section.virus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0; /* Supprime la marge automatique */
+    padding: 20px 50px; /* Ajoute du padding pour espacer le contenu */
+    width: 100%; /* Étend la section à toute la largeur de la page */
+    background-color: #c4c4c4; /* Gris foncé pour la section */
+    border-radius: 0; /* Enlève le rayon de bordure pour la pleine largeur */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Texte */
+.text1 {
+    width: 50%;
+    padding-left: 40px;
+
+}
+
+.text1 h1 {
+    font-size: 4rem; /* Augmente la taille du titre */
+    font-weight: bold; /* Met le titre en gras */
+    color: #000;
+    margin-bottom: 20px;
+}
+
+
+.text1 p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #000;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Image */
+.image-virus {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-virus img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Section maladie */
+section.maladie {
+    position: relative;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* Titre h1 */
+section.maladie h1 {
+    font-size: 5rem; /* Titre agrandi */
+    font-weight: bold;
+    margin: 20px 0;
+    color: black;
+    text-align: center;
+}
+
+section.maladie h1::before {
+    content: "La ";
+    color: #009688; /* Vert pour "La" */
+    font-weight: bold;
+}
+
+/* Bouton */
+button#VADS {
+    margin: 15px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button#VADS:hover {
+    background-color: #d0d0d0;
+}
+
+/* Texte */
+.text2 {
+    max-width: 600px;
+    margin: 20px auto;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+    padding-left: 20px; /* Décale légèrement à droite */
+}
+
+/* Images circulaires */
+.image-avaler, .image-parler, .image-respirer {
+    position: absolute;
+    width: 170px; /* Ajuste la taille des cercles */
+    height: 170px;
+    border-radius: 50%;
+    background-color: #f31e45; /* Rouge pour les cercles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* Positionnement ajusté */
+.image-avaler {
+    top: 5%; /* Place le cercle tout en haut */
+    left: 20%; /* Décalé légèrement à droite */
+}
+
+.image-parler {
+    top: 10%; /* Plus proche du titre */
+    right: 20%;
+}
+
+.image-respirer {
+    top: 55%; /* Plus proche du texte */
+    left: 15%; /* Alignement légèrement ajusté */
+    transform: translateY(-50%);
+}
+
+
+
+
+/* Section Signes */
+section.signes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3AA76D; /* Couleur de fond vert */
+    padding: 80px 60px;
+    min-height: 500px; /* Définir une hauteur minimale pour uniformiser */
+    margin: 20px auto;
+    color: #fff; /* Texte blanc */
+    width: 100%; /* Fond couvrant toute la largeur */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+}
+
+/* Image contenant les icônes */
+.image-signe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%; /* Taille de la zone de l'image */
+}
+
+.image-signe img {
+    width: 100%; /* Taille de l'image */
+    max-width: 500px; /* Limite la largeur maximale */
+    height: auto;
+}
+
+/* Texte */
+.text3 {
+    width: 48%; /* Zone pour le texte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.text3 h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.text3 p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px; /* Ajout d'espacement avant le bouton */
+}
+
+/* Bouton */
+button#ALERTE {
+    align-self: flex-start; /* Aligne le bouton à gauche */
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #070202; /* Texte vert */
+    background-color: #fff; /* Fond blanc */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: auto; /* Place le bouton en bas */
+}
+
+button#ALERTE:hover {
+    background-color: #2C8A5A; /* Vert plus foncé */
+    color: #fff; /* Texte blanc */
+    transform: scale(1.05);
+}
+
+
+
+/* Section Conséquences */
+section.cons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+    min-height: 500px; /* Définir une hauteur minimale pour uniformiser */
+    background-color: #ffffff; /* Fond blanc */
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+.image-poison, .image-tete {
+    flex: 0 0 auto; /* Fixe la taille des images */
+    width: 300px; /* Augmente la largeur des images */
+    height: auto; /* Hauteur ajustée automatiquement pour garder les proportions */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-poison img, .image-tete img {
+    max-width: 100px; /* Limite la largeur maximale des images */
+    height: auto; /* Maintient le ratio */
+}
+
+.text4 {
+    flex: 1 1 auto; /* Le texte prend la place restante */
+    text-align: center;
+    color: #000000; /* Couleur noire pour le texte */
+}
+
+.text4 h1 {
+    font-size: 50px; /* Taille du titre */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text4 p {
+    max-width: 800px;
+    line-height: 1.6;
+    margin: 0 auto; /* Espacement horizontal pour aérer */
+}
+
+
