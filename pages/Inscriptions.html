@@ -24,5 +24,41 @@
         <button class="navBouton" onclick="window.location.href='Connexion.html';">Connexion</button>
     </div>
 </nav>
+<div class="spacer"></div>
+<div class="form-container">
+    <h2>Inscription</h2>
+    <form>
+        <label for="civility">Civilité</label>
+        <select id="civility" name="civility" required>
+            <option value="">--Sélectionnez--</option>
+            <option value="mr">Monsieur</option>
+            <option value="mme">Madame</option>
+        </select>
+
+        <label for="lastname">Votre nom</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <label for="firstname">Votre prénom</label>
+        <input type="text" id="firstname" name="firstname" required>
+
+        <label for="birthdate">Date de naissance (ex : 19/04/1996)</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+
+        <label for="email">Votre mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="confirm-email">Confirmer le mail</label>
+        <input type="email" id="confirm-email" name="confirm-email" required>
+
+        <label for="password">Votre mot de passe (entre 5 et 10 caractères)</label>
+        <input type="password" id="password" name="password" minlength="5" maxlength="10" required>
+
+        <label for="confirm-password">Confirmer le mot de passe</label>
+        <input type="password" id="confirm-password" name="confirm-password" minlength="5" maxlength="10" required>
+
+        <button type="submit">S'inscrire</button>
+    </form>
+    <p>Vous avez déjà un compte ? <a href="Connexion.html">Connectez-vous</a></p>
+</div>
 </body>
 </html>
