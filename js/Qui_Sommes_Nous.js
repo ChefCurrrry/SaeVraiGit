@@ -22,7 +22,7 @@ boutonsNav.forEach(bouton => {
 
 
 // Sélectionne tous les éléments ayant la classe .circle (cercles interactifs)
-const boutonsInfo = document.querySelectorAll('.circle')
+const boutonsInfo = document.querySelectorAll('.circle1, .circle2, .circle3, .circle4')
 // Sélectionne l'élément qui affichera le texte associé aux cercles
 const texteAffiche = document.getElementById('output')
 
