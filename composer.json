@@ -1,0 +1,11 @@
+{
+    "name": "kirankumar/saes3",
+    "autoload": {
+        "psr-4": {
+            "Kirankumar\\Saes3\\": "bdd/"
+        }
+    },
+    "require": {
+      "ext-pdo": "*"
+    }
+}

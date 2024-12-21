@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/Inscriptions.css">
-    <script src="../js/Inscriptions.js" defer></script>
-    <title>Inscription</title>
-</head>
-<body>
+<?php
+if(!session_id())
+    session_start();
+require_once './Header2.php';
+?>
+
 <nav class="navbar">
     <div class="navbar-logo">
-        <a href="Accueil.html">
+        <a href="../pages/Accueil.html">
             <img src="../img/logo-association.png" alt="Logo">
         </a>
     </div>
@@ -17,11 +14,11 @@
         ☰ <!-- Icône du menu burger -->
     </button>
     <div class="containerBouton">
-        <button class="navBouton" onclick="window.location.href='Accueil.html';">Accueil</button>
-        <button class="navBouton" onclick="window.location.href='Qui_Sommes_Nous.html';">Qui sommes nous ?</button>
-        <button class="navBouton" onclick="window.location.href='Cancer_Larynx.html';">Le cancer du larynx</button>
-        <button class="navBouton" onclick="window.location.href='Contact.html';">Contactez-nous</button>
-        <button class="navBouton" onclick="window.location.href='Connexion.html';">Connexion</button>
+        <button class="navBouton" onclick="window.location.href='../pages/Accueil.html';">Accueil</button>
+        <button class="navBouton" onclick="window.location.href='../pages/Qui_Sommes_Nous.html';">Qui sommes nous ?</button>
+        <button class="navBouton" onclick="window.location.href='../pages/Cancer_Larynx.html';">Le cancer du larynx</button>
+        <button class="navBouton" onclick="window.location.href='../pages/Contact.html';">Contactez-nous</button>
+        <button class="navBouton" onclick="window.location.href='Connexion.php';">Connexion</button>
     </div>
 </nav>
 <div class="spacer"></div>
@@ -58,7 +55,8 @@
 
         <button type="submit">S'inscrire</button>
     </form>
-    <p>Vous avez déjà un compte ? <a href="Connexion.html">Connectez-vous</a></p>
+    <p>Vous avez déjà un compte ? <a href="../php/Connexion.php">Connectez-vous</a></p>
 </div>
-</body>
-</html>
+
+<?php
+require_once './Footer.php';
