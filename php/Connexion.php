@@ -2,8 +2,10 @@
 if(!session_id())
     session_start();
 require_once './Header1.php';
+
 ?>
 
+?>
 <nav class="navbar">
     <div class="navbar-logo">
         <a href="../pages/Accueil.html">

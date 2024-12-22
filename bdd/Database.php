@@ -2,6 +2,7 @@
 
 namespace Kirankumar\Saes3;
 
+use Kirankumar\Saes3\Exceptions\BddConnectException;
 use PDO;
 use PDOException;
 
@@ -13,13 +14,15 @@ class Database{
         $this->host = 'sqlite:../data/database.sqlite';
     }
 
+    /**
+     * @throws BddConnectException
+     */
     public function connect(): PDO{
         try {
             $this->pdo = new PDO($this->host);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "connexion reussi";
         } catch (PDOException $e) {
-            die("Erreur de connexion à la base de données : " . $e->getMessage());
+            throw new BddConnectException("Erreur de connexion BDD : il faut configurer la classe BDDConnect avec les bonnes valeurs");
         }
         return $this->pdo;
     }
