@@ -44,14 +44,11 @@ require_once './Header2.php';
         <label for="email">Votre mail</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="confirm-email">Confirmer le mail</label>
-        <input type="email" id="confirm-email" name="confirm-email" required>
-
         <label for="password">Votre mot de passe (entre 5 et 10 caractères)</label>
         <input type="password" id="password" name="password" minlength="5" maxlength="10" required>
 
         <label for="confirm-password">Confirmer le mot de passe</label>
-        <input type="password" id="confirm-password" name="confirm-password" minlength="5" maxlength="10" required>
+        <input type="password" id="re-password" name="re-password" minlength="5" maxlength="10" required>
 
         <button type="submit">S'inscrire</button>
     </form>

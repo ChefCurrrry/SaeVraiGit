@@ -30,7 +30,7 @@ require_once './Header1.php';
         <!-- Formulaire de Connexion -->
         <div class="connexion-form">
             <h2>Connexion</h2>
-            <form action="connexionForm.php" method="post">
+            <form action="signin.php" method="post">
                 <div class="form-group">
                         <input type="email" name="email" class="form-control" placeholder="Adresse e-mail" required>
                 </div>
