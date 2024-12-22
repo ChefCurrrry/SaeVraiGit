@@ -10,8 +10,3 @@
 
 <?php
 
-use Kirankumar\Saes3\Messages;
-
-require_once '../bdd/Messages.php';
-
-Messages::messageFlash();
