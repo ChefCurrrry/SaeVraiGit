@@ -14,8 +14,11 @@ class AuthentificationException extends \Exception{
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
+
         // Stocker le message d'erreur dans la session
         $_SESSION['error_message'] = $this->getMessage();
+
+        // Rediriger vers le formulaire avec le message d'erreur dans la session
         header("Location: $formUrl");
         exit();
     }

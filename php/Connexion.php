@@ -1,7 +1,16 @@
 <?php
 if(!session_id())
     session_start();
-require_once './Header1.php';
+// Afficher le message d'erreur s'il est défini
+if (!empty($_SESSION['error_message'])) {
+    echo '<div style="color: red; background-color: #f8d7da; padding: 10px; border: 1px solid #f5c6cb; border-radius: 5px; margin-bottom: 20px;">';
+    echo htmlspecialchars($_SESSION['error_message'], ENT_QUOTES, 'UTF-8');
+    echo '</div>';
+
+    // Supprimer le message d'erreur après l'affichage
+    unset($_SESSION['error_message']);
+}
+require_once './HeaderConnexion.php';
 
 ?>
 

@@ -1,0 +1,87 @@
+/* Applique un style global : supprime les marges et les espacements par défaut pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Supprime les marges par défaut du body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+/* Style de la barre de navigation */
+.navbar {
+    position: fixed; /* Fixe la navbar en haut de la page */
+    top: 0; /* Positionnée en haut */
+    width: 100%; /* Occupe toute la largeur de l'écran */
+    background-color: white; /* Couleur de fond blanche */
+    display: flex; /* Utilise flexbox pour organiser les éléments horizontalement */
+    justify-content: space-between; /* Espace entre les éléments de la navbar */
+    align-items: center; /* Centre les éléments verticalement */
+    padding: 15px 20px; /* Espacement interne autour des éléments de la navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile sous la navbar */
+}
+
+/* Style du logo dans la navbar */
+.navbar-logo img {
+    height: 100px; /* Hauteur fixe pour le logo */
+    margin-left: 120px; /* Espace à gauche du logo */
+}
+
+/* Conteneur pour les boutons dans la navbar */
+.containerBouton {
+    display: flex; /* Utilise flexbox pour organiser les boutons horizontalement */
+    gap: 15px; /* Espace entre chaque bouton */
+    margin-right: 80px; /* Espace à droite du conteneur */
+}
+
+/* Style des boutons dans la navbar */
+.navBouton {
+    background-color: white; /* Fond blanc pour les boutons */
+    color: black; /* Texte en noir */
+    padding: 10px 15px; /* Espacement interne des boutons */
+    font-size: 19px; /* Taille de la police des boutons */
+    border: none; /* Aucun bord par défaut */
+    border-radius: 50px; /* Coins arrondis des boutons */
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+/* Espaceur pour créer un espacement vertical sous la navbar */
+.spacer {
+    height: 170px; /* Hauteur de l'espace */
+    background-color: white; /* Fond blanc */
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Responsive : pour les écrans réduits */
+@media (max-width: 768px) {
+    .containerBouton {
+        display: none; /* Cache les boutons par défaut */
+        flex-direction: column; /* Affiche les boutons verticalement */
+        position: absolute;
+        top: 70px; /* Ajustez en fonction de la hauteur de la navbar */
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .containerBouton.show {
+        display: flex; /* Affiche le menu */
+    }
+
+    .menu-toggle {
+        display: block; /* Affiche le bouton burger */
+    }
+}

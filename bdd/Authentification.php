@@ -81,7 +81,7 @@ class Authentification{
         }
 
         // Retourner l'identifiant de l'utilisateur ou un jeton d'authentification
-        return 1;
+        return $this->userRepository->getIdOfUser($user);
     }
 
 

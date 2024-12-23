@@ -36,5 +36,10 @@ class BddUserRepository implements IUserRepository{
 
         return new User($tab['email'], $tab['password']);
     }
-
+    public function getIdOfUser(User $user): int{
+        $request = "SELECT id FROM User WHERE email = :email";
+        $stmt = $this->pdo->prepare($request);
+        $stmt->bindValue(':email', $user->getEmail());
+        return $stmt->execute();
+    }
 }

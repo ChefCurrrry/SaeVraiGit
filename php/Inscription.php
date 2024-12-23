@@ -1,8 +1,15 @@
 <?php
 if(!session_id())
     session_start();
-
-require_once './Header2.php';
+// Afficher le message d'erreur s'il est défini
+if (!empty($_SESSION['error_message'])) {
+    echo '<div style="color: red; background-color: #f8d7da; padding: 10px; border: 1px solid #f5c6cb; border-radius: 5px; margin-bottom: 20px; text-align: ;">';
+    echo htmlspecialchars($_SESSION['error_message'], ENT_QUOTES, 'UTF-8');
+    echo '</div>';
+    // Supprimer le message d'erreur après l'affichage
+    unset($_SESSION['error_message']);
+}
+require_once './HeaderInscription.php';
 ?>
 
 <nav class="navbar">
@@ -23,24 +30,14 @@ require_once './Header2.php';
     </div>
 </nav>
 <div class="spacer"></div>
-<?php
-// Afficher le message d'erreur s'il est défini
-if (!empty($_SESSION['error_message'])) {
-    echo '<div style="color: red; background-color: #f8d7da; padding: 10px; border: 1px solid #f5c6cb; border-radius: 5px; margin-bottom: 20px; text-align: ;">';
-    echo htmlspecialchars($_SESSION['error_message'], ENT_QUOTES, 'UTF-8');
-    echo '</div>';
-    // Supprimer le message d'erreur après l'affichage
-    unset($_SESSION['error_message']);
-}
-?>
 <div class="form-container">
     <h2>Inscription</h2>
     <form action="signup.php" method="post">
         <label for="email">Votre mail *</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="password">Votre mot de passe (entre 5 et 10 caractères) *</label>
-        <input type="password" id="password" name="password" minlength="5" maxlength="10" required>
+        <label for="password">Votre mot de passe *</label>
+        <input type="password" id="password" name="password" minlength="8"  required>
 
         <label for="re_password">Confirmer le mot de passe *</label>
         <input type="password" id="re_password" name="re_password" minlength="5" maxlength="10" required>

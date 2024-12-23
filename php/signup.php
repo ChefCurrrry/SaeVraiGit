@@ -9,7 +9,7 @@ use Kirankumar\Saes3\Exceptions\BddConnectException;
 if(!session_id())
     session_start();
 
-require_once 'Header2.php';
+require_once 'HeaderInscription.php';
 require_once '../vendor/autoload.php';
 
 $bdd = new Database();
@@ -19,14 +19,13 @@ try {
 }
 $authService = new Authentification($userRepository);
 try {
-    // Vérifier si le formulaire a été soumis
+    // Vérifier si le formulaire a été envoyé
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Récupérer les données du formulaire
         $email = $_POST['email'] ?? '';
         $password = $_POST['password'] ?? '';
         $repeatPassword = $_POST['re_password'] ?? '';
 
-        error_log("Email: $email, Password: $password, Repeat: $repeatPassword");
 
         // Effectuer l'inscription
         $authService->enregistrer($email, $password, $repeatPassword);
@@ -46,11 +45,5 @@ try {
     header("Location: Inscription.php");
     exit;
 }
-
-require_once 'Footer.php';
-
-
-
-
 
 require_once 'Footer.php';
