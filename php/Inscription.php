@@ -1,6 +1,7 @@
 <?php
 if(!session_id())
     session_start();
+
 require_once './Header2.php';
 ?>
 
@@ -22,33 +23,27 @@ require_once './Header2.php';
     </div>
 </nav>
 <div class="spacer"></div>
+<?php
+// Afficher le message d'erreur s'il est défini
+if (!empty($_SESSION['error_message'])) {
+    echo '<div style="color: red; background-color: #f8d7da; padding: 10px; border: 1px solid #f5c6cb; border-radius: 5px; margin-bottom: 20px; text-align: ;">';
+    echo htmlspecialchars($_SESSION['error_message'], ENT_QUOTES, 'UTF-8');
+    echo '</div>';
+    // Supprimer le message d'erreur après l'affichage
+    unset($_SESSION['error_message']);
+}
+?>
 <div class="form-container">
     <h2>Inscription</h2>
-    <form>
-        <label for="civility">Civilité</label>
-        <select id="civility" name="civility" required>
-            <option value="">--Sélectionnez--</option>
-            <option value="mr">Monsieur</option>
-            <option value="mme">Madame</option>
-        </select>
-
-        <label for="lastname">Votre nom</label>
-        <input type="text" id="lastname" name="lastname" required>
-
-        <label for="firstname">Votre prénom</label>
-        <input type="text" id="firstname" name="firstname" required>
-
-        <label for="birthDate">Date de naissance (ex : 19/04/1996)</label>
-        <input type="date" id="birthDate" name="birthdate" required>
-
-        <label for="email">Votre mail</label>
+    <form action="signup.php" method="post">
+        <label for="email">Votre mail *</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="password">Votre mot de passe (entre 5 et 10 caractères)</label>
+        <label for="password">Votre mot de passe (entre 5 et 10 caractères) *</label>
         <input type="password" id="password" name="password" minlength="5" maxlength="10" required>
 
-        <label for="confirm-password">Confirmer le mot de passe</label>
-        <input type="password" id="re-password" name="re-password" minlength="5" maxlength="10" required>
+        <label for="re_password">Confirmer le mot de passe *</label>
+        <input type="password" id="re_password" name="re_password" minlength="5" maxlength="10" required>
 
         <button type="submit">S'inscrire</button>
     </form>
