@@ -39,11 +39,26 @@ require_once './HeaderInscription.php';
         <label for="password">Votre mot de passe *</label>
         <input type="password" id="password" name="password" minlength="8"  required>
 
+        <span id="show-recommendations" style="cursor: pointer; color: #000000; font-size: 1.2em;">&#8505;</span>
+
+        <div id="password-recommendations" style="display: none; margin-top: 5px;">
+            <small>Votre mot de passe doit contenir :</small>
+            <ul>
+                <li>Au moins 8 caractères</li>
+                <li>Une lettre majuscule</li>
+                <li>Un chiffre</li>
+                <li>Un caractère spécial (par exemple, !, @, #, etc.)</li>
+            </ul>
+        </div>
+
         <label for="re_password">Confirmer le mot de passe *</label>
         <input type="password" id="re_password" name="re_password" minlength="5" maxlength="10" required>
-
+        <div class="show-password">
+        <label for="show-password" style="display: inline; margin-left: 5px;">Afficher le mot de passe<input type="checkbox" id="show-password"></label>
+        </div>
         <button type="submit">S'inscrire</button>
     </form>
+
     <p>Vous avez déjà un compte ? <a href="../php/Connexion.php">Connectez-vous</a></p>
 </div>
 

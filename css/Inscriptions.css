@@ -128,7 +128,35 @@ body {
 .form-container p a:hover {
     text-decoration: underline;
 }
+.form #show-recommendations {
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+.form #password-recommendations {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #000000;
+}
 
+.form ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.form small {
+    font-size: 0.9em;
+    color: #000000;
+}
+
+.show-password {
+    display: flex;
+    align-items: center; /* Aligne horizontalement la case à cocher et le texte */
+    justify-content: flex-start; /* Aligne le contenu à gauche */
+}
+
+.show-password input {
+    margin-right: 5px; /* Espace entre la case à cocher et le texte */
+}
 /* Responsive : pour les écrans réduits */
 @media (max-width: 768px) {
     .containerBouton {
