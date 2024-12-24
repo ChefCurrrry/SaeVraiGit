@@ -9,4 +9,9 @@
 <body>
 
 <?php
-
+if (isset($_SESSION['user_id'])) {
+    echo '<a href="Compte.php">Mon compte</a>';
+    echo '<a href="logout.php">Déconnexion</a>';
+} else {
+    echo '<a href="Connexion.php">Connexion</a>';
+}

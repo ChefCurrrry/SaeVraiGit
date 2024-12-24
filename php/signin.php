@@ -13,6 +13,9 @@ if (!session_id()) {
 require_once 'HeaderInscription.php';
 require_once '../vendor/autoload.php';
 
+
+
+
 $bdd = new Database();
 try {
     $userRepository = new BddUserRepository($bdd);
@@ -51,5 +54,7 @@ try {
     header("Location: Connexion.php");
     exit;
 }
+
+
 
 require_once 'Footer.php';

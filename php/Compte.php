@@ -1,5 +1,6 @@
 <?php
 
+
 require_once 'HeaderCompte.php';
 ?>
 <nav class="navbar">
@@ -16,7 +17,7 @@ require_once 'HeaderCompte.php';
         <button class="navBouton" onclick="window.location.href='../pages/Qui_Sommes_Nous.html';">Qui sommes nous ?</button>
         <button class="navBouton" onclick="window.location.href='../pages/Cancer_Larynx.html';">Le cancer du larynx</button>
         <button class="navBouton" onclick="window.location.href='../pages/Contact.html';">Contactez-nous</button>
-        <button class="navBouton" onclick="window.location.href='Connexion.php';">Connexion</button>
+        <button class="navBouton" onclick="window.location.href='logout.php';">Déconnexion</button>
     </div>
 <?php
 require_once 'Footer.php';

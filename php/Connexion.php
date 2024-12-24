@@ -10,8 +10,15 @@ if (!empty($_SESSION['error_message'])) {
     // Supprimer le message d'erreur après l'affichage
     unset($_SESSION['error_message']);
 }
-require_once './HeaderConnexion.php';
 
+
+require_once './HeaderConnexion.php';
+if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+    // Si l'utilisateur est déjà connecté, il ne doit pas voir la page de connexion
+    // Rediriger vers la page Compte.php si l'utilisateur est déjà connecté
+    header("Location: Compte.php");
+    exit();
+}
 ?>
 
 ?>
@@ -29,7 +36,7 @@ require_once './HeaderConnexion.php';
         <button class="navBouton" onclick="window.location.href='../pages/Qui_Sommes_Nous.html';">Qui sommes nous ?</button>
         <button class="navBouton" onclick="window.location.href='../pages/Cancer_Larynx.html';">Le cancer du larynx</button>
         <button class="navBouton" onclick="window.location.href='../pages/Contact.html';">Contactez-nous</button>
-        <button class="navBouton" onclick="window.location.href='Connexion.php';">Connexion</button>
+        <button class="navBouton" onclick="window.location.href='Connexion.php';">Compte</button>
     </div>
 </nav>
 <div class="spacer3"></div>

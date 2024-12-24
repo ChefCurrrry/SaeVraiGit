@@ -79,7 +79,9 @@ class Authentification{
         if (!password_verify($password, $user->getPassword())) {
             throw new AuthentificationException("Le mot de passe est incorrect.");
         }
-
+        $_SESSION['user_id'] = $this->userRepository->getIdOfUser($user); // Vous pouvez stocker l'ID ou l'email
+        $_SESSION['user_email'] = $user->getEmail();
+        $_SESSION['is_admin'] = $user->isAdmin();
         // Retourner l'identifiant de l'utilisateur ou un jeton d'authentification
         return $this->userRepository->getIdOfUser($user);
     }
