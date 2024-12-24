@@ -20,6 +20,7 @@ body {
     width: 100%; /* Occupe toute la largeur de l'écran */
     background-color: white; /* Couleur de fond blanche */
     display: flex; /* Utilise flexbox pour organiser les éléments horizontalement */
+    z-index: 1000;  /* Placer la barre de navigation au-dessus des autres éléments */
     justify-content: space-between; /* Espace entre les éléments de la navbar */
     align-items: center; /* Centre les éléments verticalement */
     padding: 15px 20px; /* Espacement interne autour des éléments de la navbar */
@@ -87,7 +88,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    background-color: #FFFFFF;
 }
 
 .connexion-form h2 {
