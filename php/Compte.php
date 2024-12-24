@@ -1,4 +1,5 @@
 <?php
+
 require_once 'HeaderCompte.php';
 ?>
 <nav class="navbar">

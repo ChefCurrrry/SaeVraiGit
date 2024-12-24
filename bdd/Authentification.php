@@ -51,7 +51,7 @@ class Authentification{
         }
 
         // Si tout est valide, créer un utilisateur
-        $user = new User($email, password_hash($password, PASSWORD_BCRYPT));
+        $user = new User($email, password_hash($password, PASSWORD_BCRYPT), false);
 
         // Enregistrer l'utilisateur dans le dépôt
         return $this->userRepository->saveUser($user);
