@@ -73,6 +73,7 @@ body {
 h1 {
     font-size: 3rem;
     margin: 70px 0;
+    font-family: Arial, serif;
 }
 
 /* Style pour le contenu textuel */
@@ -83,6 +84,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 30px; /* Ajout d'un espace entre le texte et le bouton */
+    font-family: Arial, serif;
 }
 
 /* Style pour le bouton avec l'ID enSP */
@@ -95,6 +97,7 @@ h1 {
     cursor: pointer;
     font-size: 17px;
     align-self: flex-start;
+    font-family: Arial, serif;
 }
 
 /* Conteneur pour les images */
@@ -121,6 +124,7 @@ h1 {
     color: black;
     margin: 20px 0 10px;
     text-align: center;
+    font-family: Arial, serif;
 }
 
 /* Conteneur pour centrer le contenu */
@@ -166,6 +170,7 @@ h1 {
     justify-content: center;
     font-size: 39px;
     border-radius: 8px;
+    font-family: Arial, serif;
 }
 
 /* Style pour les cercles */
@@ -204,7 +209,7 @@ h1 {
 }
 
 .text {
-    font-family: Arial, sans-serif;
+    font-family: Arial, serif;
     font-size: 0.8rem;
     text-align: center;
     color: black;

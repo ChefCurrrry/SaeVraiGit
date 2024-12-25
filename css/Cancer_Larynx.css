@@ -79,12 +79,14 @@ section.virus {
     background-color: #c4c4c4; /* Gris foncé pour la section */
     border-radius: 0; /* Enlève le rayon de bordure pour la pleine largeur */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, serif;
 }
 
 /* Texte */
 .text1 {
     width: 50%;
     padding-left: 40px;
+    font-family: Arial, serif;
 
 }
 
@@ -93,15 +95,17 @@ section.virus {
     font-weight: bold; /* Met le titre en gras */
     color: #000;
     margin-bottom: 20px;
+    font-family: Arial, serif;
 }
 
 
 .text1 p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
     color: #000;
     text-align: justify;
     line-height: 1.8;
+    font-family: Arial, serif;
 }
 
 /* Image */
@@ -128,6 +132,7 @@ section.maladie {
     padding: 50px 20px;
     background-color: #f5f5f5;
     text-align: center;
+    font-family: Arial, serif;
 }
 
 /* Titre h1 */
@@ -137,12 +142,14 @@ section.maladie h1 {
     margin: 20px 0;
     color: black;
     text-align: center;
+    font-family: Arial, serif;
 }
 
 section.maladie h1::before {
     content: "La ";
     color: #009688; /* Vert pour "La" */
     font-weight: bold;
+    font-family: Arial, serif;
 }
 
 /* Bouton */
@@ -168,10 +175,11 @@ button#VADS:hover {
     max-width: 600px;
     margin: 20px auto;
     color: #333;
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.8;
     text-align: justify;
     padding-left: 20px; /* Décale légèrement à droite */
+    font-family: Arial, serif;
 }
 
 /* Images circulaires */
@@ -206,9 +214,6 @@ button#VADS:hover {
     left: 15%; /* Alignement légèrement ajusté */
     transform: translateY(-50%);
 }
-
-
-
 
 /* Section Signes */
 section.signes {
@@ -245,6 +250,7 @@ section.signes {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    font-family: Arial, serif;
 }
 
 .text3 h1 {
@@ -252,12 +258,14 @@ section.signes {
     font-weight: bold;
     margin-bottom: 20px;
     color: #fff;
+    font-family: Arial, serif;
 }
 
 .text3 p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.8;
     margin-bottom: 30px; /* Ajout d'espacement avant le bouton */
+    font-family: Arial, serif;
 }
 
 /* Bouton */
@@ -293,6 +301,7 @@ section.cons {
     min-height: 500px; /* Définir une hauteur minimale pour uniformiser */
     background-color: #ffffff; /* Fond blanc */
     gap: 20px; /* Espacement entre les éléments */
+    font-family: Arial, serif;
 }
 
 .image-poison, .image-tete {
@@ -313,18 +322,22 @@ section.cons {
     flex: 1 1 auto; /* Le texte prend la place restante */
     text-align: center;
     color: #000000; /* Couleur noire pour le texte */
+    font-family: Arial, serif;
 }
 
 .text4 h1 {
-    font-size: 50px; /* Taille du titre */
+    font-size: 3rem; /* Taille du titre */
     font-weight: bold;
     margin-bottom: 20px;
+    font-family: Arial, serif;
 }
 
 .text4 p {
     max-width: 800px;
+    font-size: 1.3rem;
     line-height: 1.6;
     margin: 0 auto; /* Espacement horizontal pour aérer */
+    font-family: Arial, serif;
 }
 
 /* Responsive : pour les écrans réduits */

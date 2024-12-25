@@ -87,12 +87,14 @@ body {
     margin-bottom: 20px;
     font-size: 1.5em;
     color: #4a4a4a;
+    font-family: Arial, serif;
 }
 .form-container label {
     font-weight: bold;
     display: block;
     margin: 10px 0 5px;
     color: #4a4a4a;
+    font-family: Arial, serif;
 }
 .form-container input,
 .form-container select {

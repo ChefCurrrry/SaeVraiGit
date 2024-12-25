@@ -67,10 +67,12 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    font-family: Arial, serif;
 }
 
 .text-center {
     text-align: center;
+    font-family: Arial, serif;
 }
 .row{
 
@@ -79,12 +81,14 @@ body {
 .contact-header {
     padding: 50px 20px;
     background-color: #f9f9f9;
+    font-family: Arial, serif;
 }
 
 .contact-header h1 {
     font-size: 36px;
     font-weight: bold;
     color: #333333;
+    font-family: Arial, serif;
 }
 
 .contact-header p {
@@ -92,6 +96,7 @@ body {
     max-width: 600px;
     margin: 20px auto;
     font-size: 18px;
+    font-family: Arial, serif;
 }
 
 /* Section d'informations de contact */
@@ -116,12 +121,14 @@ body {
     font-weight: bold;
     color: #333333;
     margin-bottom: 20px;
+    font-family: Arial, serif;
 }
 
 .contact-info p {
     color: #666666;
     line-height: 1.6;
     margin-bottom: 20px;
+    font-family: Arial, serif;
 }
 
 .contact-info .info-item {
@@ -165,6 +172,7 @@ body {
     font-weight: bold;
     color: #333333;
     margin-bottom: 20px;
+    font-family: Arial, serif;
 }
 
 .contact-form form .form-field {

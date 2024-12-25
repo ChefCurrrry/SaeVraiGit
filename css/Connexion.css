@@ -73,12 +73,14 @@ body {
 
 .connexion-info {
     margin: 20px 0;
+    font-family: Arial, serif;
 }
 
 .connexion-info h3 {
     font-size: 1.8em;
     color: #333;
     margin-bottom: 20px;
+    font-family: Arial, serif;
 }
 
 .connexion-form {
@@ -97,6 +99,7 @@ body {
     color: #333;
     font-size: 2em;
     font-weight: 600;
+    font-family: Arial, serif;
 }
 
 /* Styles pour le formulaire */
@@ -134,6 +137,7 @@ body {
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: Arial, serif;
 }
 
 .btnSubmit:hover {
