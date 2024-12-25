@@ -10,7 +10,7 @@ if (!session_id()) {
     session_start();
 }
 
-require_once 'HeaderInscription.php';
+require_once 'headerInscription.php';
 require_once '../vendor/autoload.php';
 
 
@@ -21,7 +21,7 @@ try {
     $userRepository = new BddUserRepository($bdd);
 } catch (BddConnectException $e) {
     $_SESSION['error_message'] = "Échec de la connexion à la base de données.";
-    header("Location: Connexion.php");
+    header("Location: connexion.php");
     exit;
 }
 
@@ -39,22 +39,22 @@ try {
 
         // Si la connexion réussit, rediriger vers la page d'accueil ou un tableau de bord
         $_SESSION['success_message'] = "Connexion réussie !";
-        header("Location: Compte.php");
+        header("Location: compte.php");
         exit;
     }
 } catch (AuthentificationException $e) {
     // Enregistrer l'erreur dans les logs pour analyse
     error_log($e->getMessage());
     // Utiliser la méthode de redirection de l'exception pour stocker l'erreur dans la session et rediriger
-    $e->redirectToForm("Connexion.php");
+    $e->redirectToForm("connexion.php");
     exit;
 } catch (Exception $e) {
     // Gérer toute autre erreur
     $_SESSION['error_message'] = "Une erreur inattendue est survenue : " . $e->getMessage();
-    header("Location: Connexion.php");
+    header("Location: connexion.php");
     exit;
 }
 
 
 
-require_once 'Footer.php';
+require_once 'footer.php';

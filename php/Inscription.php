@@ -9,12 +9,12 @@ if (!empty($_SESSION['error_message'])) {
     // Supprimer le message d'erreur après l'affichage
     unset($_SESSION['error_message']);
 }
-require_once './HeaderInscription.php';
+require_once './headerInscription.php';
 ?>
 
 <nav class="navbar">
     <div class="navbar-logo">
-        <a href="../pages/Accueil.html">
+        <a href="../pages/accueil.html">
             <img src="../img/logo-association.png" alt="Logo">
         </a>
     </div>
@@ -22,10 +22,10 @@ require_once './HeaderInscription.php';
         ☰ <!-- Icône du menu burger -->
     </button>
     <div class="containerBouton">
-        <button class="navBouton" onclick="window.location.href='../pages/Accueil.html';">Accueil</button>
-        <button class="navBouton" onclick="window.location.href='../pages/Qui_Sommes_Nous.html';">Qui sommes nous ?</button>
-        <button class="navBouton" onclick="window.location.href='../pages/Cancer_Larynx.html';">Le cancer du larynx</button>
-        <button class="navBouton" onclick="window.location.href='../pages/Contact.html';">Contactez-nous</button>
+        <button class="navBouton" onclick="window.location.href='../pages/accueil.html';">Accueil</button>
+        <button class="navBouton" onclick="window.location.href='../pages/quiSommesNous.html';">Qui sommes nous ?</button>
+        <button class="navBouton" onclick="window.location.href='../pages/cancerDuLarynx.html';">Le cancer du larynx</button>
+        <button class="navBouton" onclick="window.location.href='../pages/contact.html';">Contactez-nous</button>
         <button class="navBouton" onclick="window.location.href='Connexion.php';">Compte</button>
     </div>
 </nav>
@@ -59,8 +59,8 @@ require_once './HeaderInscription.php';
         <button type="submit">S'inscrire</button>
     </form>
 
-    <p>Vous avez déjà un compte ? <a href="../php/Connexion.php">Connectez-vous</a></p>
+    <p>Vous avez déjà un compte ? <a href="connexion.php">Connectez-vous</a></p>
 </div>
 
 <?php
-require_once './Footer.php';
+require_once './footer.php';

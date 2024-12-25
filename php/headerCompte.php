@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/Compte.css">
-    <script src="../js/Compte.js" defer></script>
+    <link rel="stylesheet" href="../css/compte.css">
+    <script src="../js/compte.js" defer></script>
     <title>Compte</title>
 </head>
 <body>

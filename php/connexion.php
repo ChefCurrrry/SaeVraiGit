@@ -12,11 +12,11 @@ if (!empty($_SESSION['error_message'])) {
 }
 
 
-require_once './HeaderConnexion.php';
+require_once './headerConnexion.php';
 if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
     // Si l'utilisateur est déjà connecté, il ne doit pas voir la page de connexion
-    // Rediriger vers la page Compte.php si l'utilisateur est déjà connecté
-    header("Location: Compte.php");
+    // Rediriger vers la page compte.php si l'utilisateur est déjà connecté
+    header("Location: compte.php");
     exit();
 }
 ?>
@@ -24,7 +24,7 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
 ?>
 <nav class="navbar">
     <div class="navbar-logo">
-        <a href="../pages/Accueil.html">
+        <a href="../pages/accueil.html">
             <img src="../img/logo-association.png" alt="Logo">
         </a>
     </div>
@@ -32,10 +32,10 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
         ☰ <!-- Icône du menu burger -->
     </button>
     <div class="containerBouton">
-        <button class="navBouton" onclick="window.location.href='../pages/Accueil.html';">Accueil</button>
-        <button class="navBouton" onclick="window.location.href='../pages/Qui_Sommes_Nous.html';">Qui sommes nous ?</button>
-        <button class="navBouton" onclick="window.location.href='../pages/Cancer_Larynx.html';">Le cancer du larynx</button>
-        <button class="navBouton" onclick="window.location.href='../pages/Contact.html';">Contactez-nous</button>
+        <button class="navBouton" onclick="window.location.href='../pages/accueil.html';">Accueil</button>
+        <button class="navBouton" onclick="window.location.href='../pages/quiSommesNous.html';">Qui sommes nous ?</button>
+        <button class="navBouton" onclick="window.location.href='../pages/cancerDuLarynx.html';">Le cancer du larynx</button>
+        <button class="navBouton" onclick="window.location.href='../pages/contact.html';">Contactez-nous</button>
         <button class="navBouton" onclick="window.location.href='Connexion.php';">Compte</button>
     </div>
 </nav>
@@ -64,4 +64,4 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
 
 
 <?php
-require_once './Footer.php';
+require_once './footer.php';

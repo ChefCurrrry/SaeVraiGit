@@ -9,7 +9,7 @@ use Kirankumar\Saes3\Exceptions\BddConnectException;
 if(!session_id())
     session_start();
 
-require_once 'HeaderInscription.php';
+require_once 'headerInscription.php';
 require_once '../vendor/autoload.php';
 
 $bdd = new Database();
@@ -32,7 +32,7 @@ try {
 
         // Si l'inscription réussit, redirection vers la page de connexion
         $_SESSION['success_message'] = "Inscription réussie ! Vous pouvez maintenant vous connecter.";
-        header("Location: Connexion.php");
+        header("Location: connexion.php");
         exit;
     }
 } catch (AuthentificationException $e) {
@@ -46,4 +46,4 @@ try {
     exit;
 }
 
-require_once 'Footer.php';
+require_once 'footer.php';
