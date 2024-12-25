@@ -19,5 +19,10 @@ require_once 'headerCompte.php';
         <button class="navBouton" onclick="window.location.href='../pages/contact.html';">Contactez-nous</button>
         <button class="navBouton" onclick="window.location.href='logout.php';">Déconnexion</button>
     </div>
+</nav>
+
+
+
+
 <?php
 require_once 'footer.php';

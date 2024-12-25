@@ -1,0 +1,114 @@
+.container {
+    flex: 1; /* Permet de prendre tout l'espace restant entre la navbar et le bas de la page */
+    display: flex;
+    justify-content: center; /* Centre le contenu verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+    padding-top: 50px; /* Espace entre la navbar et le formulaire (ajuste cette valeur selon ta navbar) */
+}
+
+.form-container {
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #4a4a4a;
+    font-family: Arial, serif;
+}
+
+.form-container label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #4a4a4a;
+    font-family: Arial, serif;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    appearance: none;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #3700b3;
+}
+
+.form-container .form-group {
+    margin-bottom: 20px;
+}
+
+.form-container .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-container .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container .info-text {
+    font-size: 12px;
+    color: #757575;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-container p a {
+    color: #6200ea;
+    text-decoration: none;
+}
+
+.form-container p a:hover {
+    text-decoration: underline;
+}

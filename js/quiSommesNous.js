@@ -37,22 +37,6 @@ boutonsInfo.forEach(boutonI => {
     })
 })
 
-// Sélectionne l'élément avec l'ID 'aDecouvrir' (contenu caché/dévoilé)
-const contenu = document.getElementById('aDecouvrir')
-// Sélectionne le bouton avec l'ID 'enSP' qui déclenche l'affichage du contenu
-const element = document.getElementById('enSP')
-
-// Ajoute un événement au clic sur le bouton 'enSP'
-element.addEventListener('click', function () {
-    // Vérifie si le contenu est caché ou affiché
-    if (contenu.style.display === 'none' || contenu.style.display === '') {
-        // Si caché, affiche le contenu en 'flex'
-        contenu.style.display = 'flex';
-    } else {
-        // Sinon, cache le contenu
-        contenu.style.display = 'none';
-    }
-})
 
 // Sélectionne tous les éléments ayant la classe .num (chiffres à incrémenter)
 const valeurChange = document.querySelectorAll('.num')
