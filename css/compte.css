@@ -74,7 +74,7 @@ body {
     border-radius: 8px;
     border-color: #00D3FF;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 600px;
+    width: 540px;
 }
 .accessForm{
     width: 100%;
@@ -107,7 +107,6 @@ h1 {
 h2 {
     margin-top: 15px; /* Espace entre h1 et h2 */
     color: #555; /* Couleur légèrement grise pour une hiérarchie visuelle */
-    color: #555; /* Optionnel, pour différencier le style */
 }
 /* Responsive : pour les écrans réduits */
 @media (max-width: 768px) {
