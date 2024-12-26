@@ -4,6 +4,7 @@ if(!session_id())
 
 require_once 'headerFormulaire.php';
 
+
 ?>
 <div class="container">
 <div class="form-container">
@@ -18,7 +19,7 @@ require_once 'headerFormulaire.php';
         <input type="text" id="prenom" name="prenom" required><br><br>
 
         <label for="age">Quel est votre âge ?</label>
-        <input type="number" id="age" name="age" min="15" maxlength="2" required><br><br>
+        <input type="number" id="age" name="age" min="15" max="99" required oninput="limitDigits(this)"><br><br>
 
 
         <h2>2. Lieu de vie</h2>

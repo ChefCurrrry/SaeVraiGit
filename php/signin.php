@@ -39,6 +39,8 @@ try {
 
         // Si la connexion réussit, rediriger vers la page d'accueil ou un tableau de bord
         $_SESSION['success_message'] = "Connexion réussie !";
+        $_SESSION['email'] = $email;
+        $_SESSION['user_id'] = $userRepository->findUserByEmail($email)->getId();
         header("Location: compte.php");
         exit;
     }

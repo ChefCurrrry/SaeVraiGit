@@ -36,7 +36,7 @@ class BddUserRepository implements IUserRepository{
      * @return User|null
      */
     public function findUserByEmail(string $email): ?User{
-        $request = "SELECT email, password, admin FROM User WHERE email = :email";
+        $request = "SELECT id, email, password, admin FROM User WHERE email = :email";
         $stmt = $this->pdo->prepare($request);
         $stmt->bindValue(':email', $email);
         $stmt->execute();
@@ -46,18 +46,7 @@ class BddUserRepository implements IUserRepository{
             return null; // Aucun utilisateur trouvé
         }
 
-        return new User($tab['email'], $tab['password'], $tab['admin']);
+        return new User($tab['id'], $tab['email'], $tab['password'], $tab['admin']);
     }
 
-    /**
-     * Retourne l'id de l'utilisateur spécifié
-     * @param User $user
-     * @return int
-     */
-    public function getIdOfUser(User $user): int{
-        $request = "SELECT id FROM User WHERE email = :email";
-        $stmt = $this->pdo->prepare($request);
-        $stmt->bindValue(':email', $user->getEmail());
-        return $stmt->execute();
-    }
 }

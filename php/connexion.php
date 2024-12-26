@@ -21,7 +21,7 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
 }
 ?>
 
-?>
+
 <nav class="navbar">
     <div class="navbar-logo">
         <a href="../pages/accueil.html">

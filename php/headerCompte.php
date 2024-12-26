@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/compte.css">
     <script src="../js/compte.js" defer></script>
-    <title>Compte</title>
+    <title>Mon Compte</title>
 </head>
 <body>
-
 
 <?php

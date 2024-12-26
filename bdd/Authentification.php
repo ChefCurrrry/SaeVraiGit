@@ -51,7 +51,7 @@ class Authentification{
         }
 
         // Si tout est valide, créer un utilisateur
-        $user = new User($email, password_hash($password, PASSWORD_BCRYPT), false);
+        $user = new User($_SESSION['user_id'], $email, password_hash($password, PASSWORD_BCRYPT), false);
 
         // Enregistrer l'utilisateur dans le dépôt
         return $this->userRepository->saveUser($user);
@@ -79,11 +79,11 @@ class Authentification{
         if (!password_verify($password, $user->getPassword())) {
             throw new AuthentificationException("Le mot de passe est incorrect.");
         }
-        $_SESSION['user_id'] = $this->userRepository->getIdOfUser($user); // Vous pouvez stocker l'ID ou l'email
+        $_SESSION['user_id'] = $user->getId(); // Vous pouvez stocker l'ID ou l'email
         $_SESSION['user_email'] = $user->getEmail();
         $_SESSION['is_admin'] = $user->isAdmin();
         // Retourner l'identifiant de l'utilisateur ou un jeton d'authentification
-        return $this->userRepository->getIdOfUser($user);
+        return $user->getId();
     }
 
 
