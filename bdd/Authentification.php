@@ -2,8 +2,6 @@
 
 namespace Kirankumar\Saes3;
 
-
-
 use Kirankumar\Saes3\Exceptions\AuthentificationException;
 
 class Authentification{
@@ -50,8 +48,9 @@ class Authentification{
             throw new AuthentificationException("Les mots de passe ne correspondent pas.");
         }
 
+        $id = $this->userRepository->getLastInsertedId();
         // Si tout est valide, créer un utilisateur
-        $user = new User($_SESSION['user_id'], $email, password_hash($password, PASSWORD_BCRYPT), false);
+        $user = new User($id + 1, $email, password_hash($password, PASSWORD_BCRYPT), false);
 
         // Enregistrer l'utilisateur dans le dépôt
         return $this->userRepository->saveUser($user);

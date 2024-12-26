@@ -89,6 +89,26 @@ body {
 .accessForm:hover{
     background-color: #3700b3;
 }
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet de carte */
+    width: 50%; /* Ajustez la largeur selon vos besoins */
+    max-width: 600px; /* Limitez la largeur pour éviter qu'elle soit trop grande */
+}
+
+h1 {
+    margin-bottom: 20px; /* Espace entre h1 et le contenu suivant */
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 15px; /* Espace entre h1 et h2 */
+    color: #555; /* Couleur légèrement grise pour une hiérarchie visuelle */
+    color: #555; /* Optionnel, pour différencier le style */
+}
 /* Responsive : pour les écrans réduits */
 @media (max-width: 768px) {
     .containerBouton {

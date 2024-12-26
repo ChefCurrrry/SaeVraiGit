@@ -48,5 +48,8 @@ class BddUserRepository implements IUserRepository{
 
         return new User($tab['id'], $tab['email'], $tab['password'], $tab['admin']);
     }
+    public function getLastInsertedId(): int{
+        return $this->pdo->lastInsertId();
+    }
 
 }

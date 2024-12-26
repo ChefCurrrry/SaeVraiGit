@@ -1,7 +1,32 @@
 <?php
+
+use Kirankumar\Saes3\BddUserRepository;
+use Kirankumar\Saes3\Database;
+use Kirankumar\Saes3\Exceptions\BddConnectException;
+
 if(!session_id())
     session_start();
 require_once 'headerCompte.php';
+require_once '../vendor/autoload.php';
+
+$bdd = new Database();
+try {
+    $userRepository = new BddUserRepository($bdd);
+} catch (BddConnectException $e) {
+    $_SESSION['error_message'] = "Échec de la connexion à la base de données.";
+    header("Location: connexion.php");
+    exit;
+}
+$pdo = $bdd->connect();
+$email = $_SESSION['email'];
+$user = $userRepository->findUserByEmail($email);
+$userId = $user->getId();
+$stmt = $pdo->prepare('SELECT * FROM ARepondu WHERE user_id = :userId');
+$stmt->bindValue(':userId', $userId);
+$stmt->execute();
+
+$hasResponded = $stmt->fetchColumn() > 0; // Retourne true si l'utilisateur a déjà répondu
+
 ?>
     <nav class="navbar">
         <div class="navbar-logo">
@@ -20,9 +45,18 @@ require_once 'headerCompte.php';
             <button class="navBouton" onclick="window.location.href='logout.php';">Déconnexion</button>
         </div>
     </nav>
-    <div class="spacer"></div>
-    <div class="containerBoutonForm">
-        <button class="accessForm" onclick="window.location.href='formulaire.php';">Accédez à l'enquête !</button>
+    <div class="container">
+        <div class="header">
+            <h1>Bienvenu sur votre espace</h1>
+        </div>
+        <?php if (!$hasResponded): ?>
+        <div class="containerBoutonForm">
+            <button class="accessForm" onclick="window.location.href='formulaire.php';">Accédez à l'enquête !</button>
+        </div>
+
+        <?php else: ?>
+            <h2>Vous avez déjà répondu à l'enquête. Merci !</h2>
+        <?php endif; ?>
     </div>
 
 <?php
