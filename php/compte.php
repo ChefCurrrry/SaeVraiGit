@@ -27,6 +27,11 @@ $stmt->execute();
 
 $hasResponded = $stmt->fetchColumn() > 0; // Retourne true si l'utilisateur a déjà répondu
 
+$stmt2 = $pdo->prepare('SELECT * FROM User WHERE id = :userId AND admin = true');
+$stmt2->bindValue(':userId', $userId);
+$stmt2->execute();
+
+$isAdmin = $stmt2->fetchColumn() > 0;
 ?>
     <nav class="navbar">
         <div class="navbar-logo">
@@ -51,11 +56,17 @@ $hasResponded = $stmt->fetchColumn() > 0; // Retourne true si l'utilisateur a d�
         </div>
         <?php if (!$hasResponded): ?>
         <div class="containerBoutonForm">
-            <button class="accessForm" onclick="window.location.href='formulaire.php';">Accédez à l'enquête !</button>
+            <button class="accessForm" onclick="window.location.href='formulaire.php';">Accédez à l'enquête</button>
         </div>
-
         <?php else: ?>
             <h2>Vous avez déjà répondu à l'enquête. Merci !</h2>
+        <?php endif; ?>
+        <?php if($isAdmin): ?>
+        <div class="containerBoutonForm">
+            <button class="accessForm" onclick="window.location.href='Resultat.php';">Accédez aux Résultats</button>
+        </div>
+        <?php else: ?>
+            <h2>Vous n'êtes pas administrateur vous n'avez pas accès aux résultats</h2>
         <?php endif; ?>
     </div>
 

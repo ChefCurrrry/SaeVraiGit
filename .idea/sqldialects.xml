@@ -4,5 +4,7 @@
     <file url="file://$PROJECT_DIR$/bdd/BddAnswerRepository.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/bdd/BddUserRepository.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/bdd/User.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/php/compte.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/php/resultat.php" dialect="GenericSQL" />
   </component>
 </project>

@@ -50,14 +50,18 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
             <h2>Connexion</h2>
             <form action="signin.php" method="post">
                 <div class="form-group">
+                    <label>
                         <input type="email" name="email" class="form-control" placeholder="Adresse e-mail" required>
+                    </label>
                 </div>
                 <div class="form-group">
+                    <label>
                         <input type="password" name="password" class="form-control" placeholder="Mot de Passe" required>
+                    </label>
                     <button type="submit" class="btnSubmit">Se connecter</button>
                 </div>
             </form>
-            <a>Pas encore de compte ? </a><a href="Inscription.php">Inscrivez-vous</a>
+            <a>Pas encore de compte ? </a><a href="inscription.php">Inscrivez-vous</a>
         </div>
     </div>
 </section>

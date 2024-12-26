@@ -37,12 +37,12 @@ try {
     }
 } catch (AuthentificationException $e) {
     error_log($e->getMessage()); // Enregistrer l'erreur dans les logs pour analyse
-    $e->redirectToForm('Inscription.php');
+    $e->redirectToForm('inscription.php');
     die();
 } catch (Exception $e) {
     // Gérer toute autre erreur
     $_SESSION['error_message'] = "Une erreur inattendue est survenue : " . $e->getMessage();
-    header("Location: Inscription.php");
+    header("Location: inscription.php");
     exit;
 }
 
