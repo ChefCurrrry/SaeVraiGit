@@ -363,6 +363,12 @@ section.cons {
     .menu-toggle {
         display: block; /* Affiche le bouton burger */
     }
+    .image-avaler,
+    .image-parler,
+    .image-respirer {
+        display: none; /* Cache complètement les éléments */
+    }
+
 }
 
 
