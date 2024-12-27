@@ -69,6 +69,124 @@ body {
     align-items: center; /* Centre verticalement l'icône */
     justify-content: center;
 }
+.presentationContainer {
+    display: flex; /* Affiche les éléments en ligne */
+    height: 700px;
+    justify-content: space-between; /* Ajoute de l'espace entre la vidéo et le texte */
+    align-items: center; /* Centre les éléments verticalement */
+    padding: 40px; /* Ajoute du padding autour du conteneur */
+    gap: 20px; /* Espacement entre la vidéo et le texte */
+    background-color: #d3d3d3;
+}
+
+/* Style pour la colonne contenant la vidéo */
+.videoContainer {
+    flex: 1;
+    max-width: 45%; /* Largeur maximale à 45% */
+    text-align: center;
+    min-height: 600px !important;
+    display: flex; /* Active Flexbox pour centrer la vidéo */
+    justify-content: center; /* Centre la vidéo horizontalement */
+    align-items: center; /* Centre la vidéo verticalement */
+}
+
+/* Style pour l'iframe de la vidéo */
+.videoContainer iframe {
+    width: 80%; /* La vidéo occupe toute la largeur */
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile */
+}
+
+/* Style pour la colonne contenant le texte */
+.textPresentation {
+    flex: 1; /* Le texte prend une part proportionnelle de l'espace */
+    max-width: 45%; /* Limite la largeur maximale à 45% */
+    text-align: left; /* Aligne le texte à gauche */
+    font-size: 1.55rem; /* Taille du texte */
+    line-height: 1.8; /* Hauteur de ligne pour une meilleure lisibilité */
+    color: #333; /* Couleur légèrement grise pour le texte */
+    font-family: Arial, serif;
+}
+
+/* Style pour le titre dans la section texte */
+.textPresentation h2 {
+    font-size: 4rem; /* Taille du titre */
+    font-weight: bold; /* Met le titre en gras */
+    margin-bottom: 20px; /* Ajoute un espace sous le titre */
+    color: #000; /* Couleur noire pour le titre */
+    font-family: Arial, serif;
+}
+
+/* Conteneur principal */
+.action-container {
+    display: flex; /* Alignement horizontal */
+    height: 500px;
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    gap: 40px; /* Augmente l'espacement entre les blocs */
+    background-color: #d3e9ff; /* Couleur de fond pour le conteneur */
+    padding: 40px; /* Ajoute plus de padding autour des blocs */
+    background: linear-gradient(to bottom, #ecf1f5, #bce1fe );
+}
+
+/* Style des cartes */
+.action-card {
+    display: flex;
+    flex-direction: column; /* Arrange le texte et le bouton verticalement */
+    justify-content: center; /* Centre le contenu verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+    width: 300px; /* Largeur des blocs agrandie */
+    height: 200px; /* Hauteur des blocs agrandie */
+    border-radius: 15px; /* Coins arrondis */
+    color: white; /* Couleur du texte */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+    font-family: Arial, serif;
+}
+
+/* Couleurs spécifiques pour chaque carte */
+.action-card.blue {
+    background-color: #007bff; /* Bleu */
+    font-family: Arial, serif;
+}
+
+.action-card.green {
+    background-color: #28a745; /* Vert */
+    font-family: Arial, serif;
+}
+
+.action-card.red {
+    background-color: #dc3545; /* Rouge */
+    font-family: Arial, serif;
+}
+
+/* Style des titres */
+.action-card h3 {
+    margin-bottom: 20px; /* Augmente l'espacement entre le titre et le bouton */
+    text-align: center; /* Centre le texte */
+    font-size: 1.5rem; /* Taille du texte agrandie */
+    font-family: Arial, serif;
+}
+
+/* Style des boutons */
+.action-button {
+    background-color: white; /* Fond du bouton */
+    color: black; /* Couleur du texte */
+    border: 2px solid black; /* Bordure plus épaisse */
+    border-radius: 30px; /* Boutons plus arrondis */
+    padding: 15px 30px; /* Espacement interne agrandi */
+    font-size: 1.1rem; /* Taille du texte agrandie */
+    cursor: pointer; /* Change le curseur au survol */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Effets au survol */
+.action-button:hover {
+    background-color: black; /* Change la couleur de fond */
+    color: white; /* Change la couleur du texte */
+    transform: scale(1.1); /* Agrandit davantage le bouton */
+}
+
 /* Responsive : pour les écrans réduits */
 @media (max-width: 768px) {
     .containerBouton {
@@ -91,5 +209,17 @@ body {
 
     .menu-toggle {
         display: block; /* Affiche le bouton burger */
+    }
+    .presentationContainer {
+        flex-direction: column; /* Passe les éléments en colonne */
+        padding: 20px; /* Réduit le padding */
+    }
+
+    .videoContainer, .textPresentation {
+        max-width: 100%; /* La vidéo et le texte occupent toute la largeur */
+    }
+
+    .videoContainer iframe {
+        width: 100%; /* La vidéo prend toute la largeur de l'écran */
     }
 }
