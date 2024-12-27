@@ -1,16 +1,9 @@
-/* Applique un style global : supprime les marges et les espacements par défaut pour tous les éléments */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Supprime les marges par défaut du body */
 body {
-    margin: 0; /* Pas de marges par défaut */
+    font-family: Arial, serif;
+    margin: 0;
+    color: #000000;
+    text-align: center;
 }
-
-/* Style de la barre de navigation */
 .navbar {
     position: fixed; /* Fixe la navbar en haut de la page */
     top: 0; /* Positionnée en haut */
@@ -20,7 +13,7 @@ body {
     z-index: 1000;  /* Placer la barre de navigation au-dessus des autres éléments */
     justify-content: space-between; /* Espace entre les éléments de la navbar */
     align-items: center; /* Centre les éléments verticalement */
-    padding: 15px 20px; /* Espacement interne autour des éléments de la navbar */
+    padding: 15px 15px; /* Espacement interne autour des éléments de la navbar */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile sous la navbar */
 }
 
@@ -58,18 +51,69 @@ body {
     height: 170px; /* Hauteur de l'espace */
     background-color: white; /* Fond blanc */
 }
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+thead {
+    background-color: #757575;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+    color: #333333;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+tfoot {
+    background-color: #757575;
+    color: #000000;
+    font-weight: bold;
+}
+
+tfoot td {
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #000000;
+}
+li{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.graphiqueContainer{
+    margin-top: 100px;
+}
+
 .menu-toggle {
-    display: none; /* Par défaut caché sur les grands écrans */
+    display: none;
     background: none;
     border: none;
-    font-size: 24px; /* Taille de l'icône */
+    font-size: 24px;
     cursor: pointer;
-    padding: 10px; /* Ajoutez du padding pour augmenter la zone cliquable */
-    color: black;
-    align-items: center; /* Centre verticalement l'icône */
-    justify-content: center;
+    padding-right: 45px;
 }
-/* Responsive : pour les écrans réduits */
+
+/* Style responsive */
 @media (max-width: 768px) {
     .containerBouton {
         display: none; /* Cache les boutons par défaut */
@@ -91,5 +135,6 @@ body {
 
     .menu-toggle {
         display: block; /* Affiche le bouton burger */
+        right: 20px;
     }
 }
