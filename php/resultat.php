@@ -103,9 +103,8 @@ echo '<script>let soutienData = ' . json_encode($soutiens) . ';</script>';
         <li>Âge moyen : <?= $ageStats['age_moyen']; ?> ans</li>
         <li>Âge minimum : <?= $ageStats['age_min']; ?> ans</li>
         <li>Âge maximum : <?= $ageStats['age_max']; ?> ans</li>
-    <div class="graphiqueContainer"></div>
 
-    <div id="insertion-chart"></div>
+    <div id="insertion-chart" class="graphiqueContainer"></div>
     <h1>Nos adhérents ont-ils besoins de soutien ?</h1>
     <div id="chart"></div>
 <?php

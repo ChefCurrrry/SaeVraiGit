@@ -3,6 +3,7 @@ body {
     margin: 0;
     color: #000000;
     text-align: center;
+
 }
 .navbar {
     position: fixed; /* Fixe la navbar en haut de la page */
@@ -100,10 +101,9 @@ li{
     font-size: 20px;
     margin-bottom: 5px;
 }
-.graphiqueContainer{
+.graphiqueContainer {
     margin-top: 100px;
 }
-
 .menu-toggle {
     display: none;
     background: none;

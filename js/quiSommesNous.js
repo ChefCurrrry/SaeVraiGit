@@ -45,7 +45,7 @@ const interval = 1
 
 // Parcourt chaque élément .num
 valeurChange.forEach((valeurChange) => {
-    let valeurDebut = 3000; // Définir la valeur de départ (exemple : 3000)
+    let valeurDebut = 0; // Définir la valeur de départ (exemple : 3000)
     // Récupère la valeur cible (attribut data-value) à laquelle le compteur doit arriver
     const valeurFin = parseInt(valeurChange.getAttribute('data-value'));
     // Calcule la durée d'incrémentation (interval divisé par la valeur finale)
