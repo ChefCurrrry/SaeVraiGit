@@ -66,18 +66,23 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
-.containerBoutonForm{
-    align-content: center;
-    margin-top: 40px;
-    background-color: white;
+.containerBoutonForm {
+    display: flex;
+    justify-content: center; /* Centre le bouton à l'intérieur */
+    align-items: center; /* Centre le contenu verticalement */
+    flex-direction: column; /* Arrange les éléments verticalement */
+    margin: 20px auto; /* Ajoute un espace vertical et centre la division */
     padding: 20px;
     border-radius: 8px;
-    border-color: #00D3FF;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 540px;
+    width: 100%; /* Prend toute la largeur possible */
+    max-width: 500px; /* Limite la largeur maximale */
 }
-.accessForm{
-    width: 100%;
+.accessForm {
+    display: block;
+    width: 100%; /* S'assure que le bouton prend toute la largeur du conteneur */
+    max-width: 400px; /* Largeur maximale du bouton pour les écrans plus larges */
+    margin: 0 auto; /* Centre le bouton horizontalement */
     padding: 10px;
     background-color: #6200ea;
     color: white;
@@ -130,5 +135,13 @@ h2 {
 
     .menu-toggle {
         display: block; /* Affiche le bouton burger */
+    }
+    .containerBoutonForm {
+        width: 90%; /* Ajuste la largeur pour les petits écrans */
+        max-width: none; /* Supprime les limites fixes */
+    }
+
+    .accessForm {
+        max-width: 100%; /* Le bouton s'adapte complètement à la division */
     }
 }
