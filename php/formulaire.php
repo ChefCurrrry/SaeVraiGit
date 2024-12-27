@@ -44,7 +44,7 @@ require_once 'headerFormulaire.php';
 
 
         <h2>3. Insertion professionnelle et sociale</h2>
-        <label for="insertion">Quelle est votre situation actuelle ?</label>
+        <label for="insertion">Quelle est votre situation professionnelle et/ou sociale ?</label>
         <select id="insertion" name="insertion" required>
             <option value="">--Sélectionnez votre situation--</option>
             <option value="Scolarité en milieu ordinaire">Scolarité en milieu ordinaire</option>
@@ -86,7 +86,7 @@ require_once 'headerFormulaire.php';
             <option value="Interventions ponctuelles">Des interventions et des stimulations ponctuelles mais quotidiennes (toilettes, sorties, repas, communication...)</option>
         </select><br><br>
 
-        <button type="submit" onclick="window.location.href='compte.php';">Envoyer</button>
+        <button type="submit">Envoyer</button>
     </form>
 </div>
 </div>
