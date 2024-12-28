@@ -365,6 +365,8 @@ section.cons {
     }
     .image-avaler,
     .image-parler,
+    .image-poison,
+    .image-tete,
     .image-respirer {
         display: none; /* Cache complètement les éléments */
     }
