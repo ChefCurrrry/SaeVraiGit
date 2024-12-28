@@ -39,7 +39,7 @@ require_once './headerInscription.php';
         <label for="password">Votre mot de passe *</label>
         <input type="password" id="password" name="password" minlength="8"  required>
 
-        <span id="show-recommendations" style="cursor: pointer; color: #000000; font-size: 1.2em;">&#8505;</span>
+        <span id="show-recommendations" style="cursor: pointer; color: #000000; font-size: 1.2em; font-family: Arial,serif">&#8505;</span>
 
         <div id="password-recommendations" style="display: none; margin-top: 5px;">
             <small>Votre mot de passe doit contenir :</small>
@@ -52,9 +52,9 @@ require_once './headerInscription.php';
         </div>
 
         <label for="re_password">Confirmer le mot de passe *</label>
-        <input type="password" id="re_password" name="re_password" minlength="5" maxlength="10" required>
+        <input type="password" id="re_password" name="re_password" minlength="8"  required>
         <div class="show-password">
-        <label for="show-password" style="display: inline; margin-left: 5px;">Afficher le mot de passe<input type="checkbox" id="show-password"></label>
+        <label for="show-password" style=" margin-left: 5px;">Afficher le mot de passe<input type="checkbox" id="show-password"></label>
         </div>
         <button type="submit">S'inscrire</button>
     </form>

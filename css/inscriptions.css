@@ -152,13 +152,11 @@ body {
 
 .show-password {
     display: flex;
-    align-items: center; /* Aligne horizontalement la case à cocher et le texte */
-    justify-content: flex-start; /* Aligne le contenu à gauche */
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.show-password input {
-    margin-right: 5px; /* Espace entre la case à cocher et le texte */
-}
+
 /* Responsive : pour les écrans réduits */
 @media (max-width: 768px) {
     .containerBouton {

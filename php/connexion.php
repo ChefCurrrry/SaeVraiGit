@@ -56,8 +56,11 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
                 </div>
                 <div class="form-group">
                     <label>
-                        <input type="password" name="password" class="form-control" placeholder="Mot de Passe" required>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Mot de Passe" required>
                     </label>
+                    <div class="show-password">
+                        <label for="show-password" style="margin-left: 5px; display: flex; align-items: center">Afficher le mot de passe<input type="checkbox" id="show-password" style="margin-left: 10px;"></label>
+                    </div>
                     <button type="submit" class="btnSubmit">Se connecter</button>
                 </div>
             </form>
