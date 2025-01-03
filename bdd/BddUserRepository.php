@@ -51,5 +51,4 @@ class BddUserRepository implements IUserRepository{
     public function getLastInsertedId(): int{
         return $this->pdo->lastInsertId();
     }
-
 }

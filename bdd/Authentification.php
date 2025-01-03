@@ -16,43 +16,34 @@ class Authentification{
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new AuthentificationException("L'adresse email est invalide.");
         }
-
         // Vérifier si l'utilisateur existe déjà
         if ($this->userRepository->findUserByEmail($email)) {
             throw new AuthentificationException("Un utilisateur avec cet email existe déjà.");
         }
-
         // Validation du mot de passe
         if (strlen($password) < 8) {
             throw new AuthentificationException("Le mot de passe doit contenir au moins 8 caractères.");
         }
-
         if (!preg_match('/[A-Z]/', $password)) {
             throw new AuthentificationException("Le mot de passe doit contenir au moins une lettre majuscule.");
         }
-
         if (!preg_match('/[a-z]/', $password)) {
             throw new AuthentificationException("Le mot de passe doit contenir au moins une lettre minuscule.");
         }
-
         if (!preg_match('/[0-9]/', $password)) {
             throw new AuthentificationException("Le mot de passe doit contenir au moins un chiffre.");
         }
-
         if (!preg_match('/[\W_]/', $password)) {
             throw new AuthentificationException("Le mot de passe doit contenir au moins un caractère spécial.");
         }
-
         // Vérification que les deux mots de passe correspondent
         if ($password !== $repeat) {
             throw new AuthentificationException("Les mots de passe ne correspondent pas.");
         }
-
         $id = $this->userRepository->getLastInsertedId();
         $roleDefault = 'member';
         // Si tout est valide, créer un utilisateur
         $user = new User($id + 1, $email, password_hash($password, PASSWORD_BCRYPT), $roleDefault);
-
         // Enregistrer l'utilisateur dans le dépôt
         return $this->userRepository->saveUser($user);
     }

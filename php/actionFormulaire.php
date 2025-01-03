@@ -8,17 +8,13 @@ use Kirankumar\Saes3\BddUserRepository;
 use Kirankumar\Saes3\Database;
 use Kirankumar\Saes3\Exceptions\BddConnectException;
 use Kirankumar\Saes3\RepondreEnquete;
-
 require_once '../vendor/autoload.php';
-
-
 $bdd = new Database();
 try {
     $userRepository = new BddUserRepository($bdd);
 } catch (BddConnectException $e) {
 
 }
-$authService = new Authentification($userRepository);
 $answerRepository = new BddAnswerRepository($bdd, $userRepository);
 $answerRegisterService = new RepondreEnquete($answerRepository);
 

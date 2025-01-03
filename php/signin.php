@@ -9,13 +9,8 @@ use Kirankumar\Saes3\Exceptions\BddConnectException;
 if (!session_id()) {
     session_start();
 }
-
 require_once '../header/headerInscription.php';
 require_once '../vendor/autoload.php';
-
-
-
-
 $bdd = new Database();
 try {
     $userRepository = new BddUserRepository($bdd);
@@ -24,19 +19,15 @@ try {
     header("Location: connexion.php");
     exit;
 }
-
 $authService = new Authentification($userRepository);
-
 try {
     // Vérifier si le formulaire de connexion a été envoyé
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Récupérer les données du formulaire
         $email = $_POST['email'] ?? '';
         $password = $_POST['password'] ?? '';
-
         // Effectuer la connexion
         $authService->authentifier($email, $password);
-
         // Si la connexion réussit, rediriger vers la page d'accueil ou un tableau de bord
         $_SESSION['success_message'] = "Connexion réussie !";
         $_SESSION['email'] = $email;
@@ -56,7 +47,5 @@ try {
     header("Location: connexion.php");
     exit;
 }
-
-
-
 require_once '../header/footer.php';
+

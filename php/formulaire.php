@@ -1,10 +1,7 @@
 <?php
 if(!session_id())
     session_start();
-
 require_once '../header/headerFormulaire.php';
-
-
 ?>
 <div class="container">
 <div class="form-container">
@@ -20,7 +17,6 @@ require_once '../header/headerFormulaire.php';
 
         <label for="age">Quel est votre âge ?</label>
         <input type="number" id="age" name="age" min="15" max="99" required oninput="limitDigits(this)"><br><br>
-
 
         <h2>2. Lieu de vie</h2>
         <label for="region">Dans quelle région habitez-vous ?</label>
@@ -42,7 +38,6 @@ require_once '../header/headerFormulaire.php';
             <option value="Outre-Mer">Outre-Mer</option>
         </select><br><br>
 
-
         <h2>3. Insertion professionnelle et sociale</h2>
         <label for="insertion">Quelle est votre situation professionnelle et/ou sociale ?</label>
         <select id="insertion" name="insertion" required>
@@ -57,6 +52,8 @@ require_once '../header/headerFormulaire.php';
             <option value="Sans activité">Sans aucune activité scolaire ou professionnelle</option>
             <option value="Autre">Autre</option>
         </select><br><br>
+
+
 
 
         <h2>4. Qualité de vie</h2>
@@ -74,7 +71,6 @@ require_once '../header/headerFormulaire.php';
             <option value="Maladie">Maladie, difficultés à prendre soin de soi-même</option>
             <option value="Éloignement">Éloignement de la personne</option>
         </select><br><br>
-
 
         <h2>5. Besoin de soutien</h2>
         <label for="soutien">Avez-vous besoin d'un soutien particulier ?</label>
