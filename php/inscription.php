@@ -9,7 +9,7 @@ if (!empty($_SESSION['error_message'])) {
     // Supprimer le message d'erreur après l'affichage
     unset($_SESSION['error_message']);
 }
-require_once './headerInscription.php';
+require_once '../header/headerInscription.php';
 ?>
 
 <nav class="navbar">
@@ -63,4 +63,4 @@ require_once './headerInscription.php';
 </div>
 
 <?php
-require_once './footer.php';
+require_once '../header/footer.php';

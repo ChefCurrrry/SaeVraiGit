@@ -21,11 +21,11 @@ class BddUserRepository implements IUserRepository{
      * @return bool
      */
     public function saveUser(User $user): bool{
-        $request = "INSERT INTO User (email, password, admin) VALUES (:email, :password, :isAdmin)";
+        $request = "INSERT INTO User (email, password, role) VALUES (:email, :password, :role)";
         $stmt = $this->pdo->prepare($request);
         $stmt->bindValue(":email", $user->getEmail());
         $stmt->bindValue(":password", $user->getPassword());
-        $stmt->bindValue(":isAdmin", $user->isAdmin(), PDO::PARAM_BOOL);
+        $stmt->bindValue(":role", $user->role(), PDO::PARAM_STR);
         return $stmt->execute();
 
     }
@@ -36,7 +36,7 @@ class BddUserRepository implements IUserRepository{
      * @return User|null
      */
     public function findUserByEmail(string $email): ?User{
-        $request = "SELECT id, email, password, admin FROM User WHERE email = :email";
+        $request = "SELECT id, email, password, role FROM User WHERE email = :email";
         $stmt = $this->pdo->prepare($request);
         $stmt->bindValue(':email', $email);
         $stmt->execute();
@@ -46,7 +46,7 @@ class BddUserRepository implements IUserRepository{
             return null; // Aucun utilisateur trouvé
         }
 
-        return new User($tab['id'], $tab['email'], $tab['password'], $tab['admin']);
+        return new User($tab['id'], $tab['email'], $tab['password'], $tab['role']);
     }
     public function getLastInsertedId(): int{
         return $this->pdo->lastInsertId();

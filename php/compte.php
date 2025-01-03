@@ -6,7 +6,7 @@ use Kirankumar\Saes3\Exceptions\BddConnectException;
 
 if(!session_id())
     session_start();
-require_once 'headerCompte.php';
+require_once '../header/headerCompte.php';
 require_once '../vendor/autoload.php';
 
 $bdd = new Database();
@@ -27,8 +27,9 @@ $stmt->execute();
 
 $hasResponded = $stmt->fetchColumn() > 0; // Retourne true si l'utilisateur a déjà répondu
 
-$stmt2 = $pdo->prepare('SELECT * FROM User WHERE id = :userId AND admin = true');
+$stmt2 = $pdo->prepare('SELECT * FROM User WHERE id = :userId AND role like :role');
 $stmt2->bindValue(':userId', $userId);
+$stmt2->bindValue(':role', 'admin');
 $stmt2->execute();
 
 $isAdmin = $stmt2->fetchColumn() > 0;
@@ -57,7 +58,10 @@ $isAdmin = $stmt2->fetchColumn() > 0;
         <?php if ($isAdmin): ?>
             <!-- Si l'utilisateur est administrateur, affiche uniquement le bouton des résultats -->
             <div class="containerBoutonForm">
-                <button class="accessForm" onclick="window.location.href='Resultat.php';">Accédez aux Résultats</button>
+                <button class="accessForm" onclick="window.location.href='resultat.php';">Accédez aux Résultats</button>
+            </div>
+            <div class="containerBoutonForm">
+                <button class="accessForm" onclick="window.location.href='gestionComptes.php';">Gestion des Comptes</button>
             </div>
         <?php elseif (!$hasResponded): ?>
             <!-- Si l'utilisateur n'est pas administrateur et n'a pas répondu à l'enquête -->
@@ -71,4 +75,4 @@ $isAdmin = $stmt2->fetchColumn() > 0;
     </div>
 
 <?php
-require_once 'footer.php';
+require_once '../header/footer.php';

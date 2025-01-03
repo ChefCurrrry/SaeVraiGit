@@ -49,8 +49,9 @@ class Authentification{
         }
 
         $id = $this->userRepository->getLastInsertedId();
+        $roleDefault = 'member';
         // Si tout est valide, créer un utilisateur
-        $user = new User($id + 1, $email, password_hash($password, PASSWORD_BCRYPT), false);
+        $user = new User($id + 1, $email, password_hash($password, PASSWORD_BCRYPT), $roleDefault);
 
         // Enregistrer l'utilisateur dans le dépôt
         return $this->userRepository->saveUser($user);
@@ -80,7 +81,7 @@ class Authentification{
         }
         $_SESSION['user_id'] = $user->getId(); // Vous pouvez stocker l'ID ou l'email
         $_SESSION['user_email'] = $user->getEmail();
-        $_SESSION['is_admin'] = $user->isAdmin();
+        $_SESSION['role'] = $user->role();
         // Retourner l'identifiant de l'utilisateur ou un jeton d'authentification
         return $user->getId();
     }

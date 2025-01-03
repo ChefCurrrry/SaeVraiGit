@@ -12,7 +12,7 @@ if (!empty($_SESSION['error_message'])) {
 }
 
 
-require_once './headerConnexion.php';
+require_once '../header/headerConnexion.php';
 if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
     // Si l'utilisateur est déjà connecté, il ne doit pas voir la page de connexion
     // Rediriger vers la page compte.php si l'utilisateur est déjà connecté
@@ -71,4 +71,4 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
 
 
 <?php
-require_once './footer.php';
+require_once '../header/footer.php';

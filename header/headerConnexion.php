@@ -10,8 +10,8 @@
 
 <?php
 if (isset($_SESSION['user_id'])) {
-    echo '<a href="compte.php">Mon compte</a>';
-    echo '<a href="logout.php">Déconnexion</a>';
+    echo '<a href="../php/compte.php">Mon compte</a>';
+    echo '<a href="../php/logout.php">Déconnexion</a>';
 } else {
-    echo '<a href="connexion.php">Connexion</a>';
+    echo '<a href="../php/connexion.php">Connexion</a>';
 }

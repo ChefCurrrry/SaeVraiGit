@@ -2,7 +2,7 @@
 if(!session_id())
     session_start();
 
-require_once 'headerFormulaire.php';
+require_once '../header/headerFormulaire.php';
 
 
 ?>
@@ -91,4 +91,4 @@ require_once 'headerFormulaire.php';
 </div>
 </div>
 <?php
-require_once 'footer.php';
+require_once '../header/footer.php';

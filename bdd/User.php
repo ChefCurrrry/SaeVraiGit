@@ -3,7 +3,7 @@
 namespace Kirankumar\Saes3;
 
 class User{
-    public function __construct(private int $id, private string $email, private string $password, private bool $isAdmin) { }
+    public function __construct(private int $id, private string $email, private string $password, private String $role) { }
 
     public function getId(): int{
         return $this->id;
@@ -15,8 +15,8 @@ class User{
     public function getPassword() : string {
         return $this->password;
     }
-    public function isAdmin() : bool {
-        return $this->isAdmin;
+    public function role() : String {
+        return $this->role;
     }
 
 

@@ -9,7 +9,7 @@ use Kirankumar\Saes3\Exceptions\BddConnectException;
 if(!session_id())
     session_start();
 
-require_once 'headerInscription.php';
+require_once '../header/headerInscription.php';
 require_once '../vendor/autoload.php';
 
 $bdd = new Database();
@@ -46,4 +46,4 @@ try {
     exit;
 }
 
-require_once 'footer.php';
+require_once '../header/footer.php';

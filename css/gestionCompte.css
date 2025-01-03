@@ -1,10 +1,13 @@
+
+
+/* Supprime les marges par défaut du body */
 body {
     font-family: Arial, serif;
     margin: 0;
     color: #000000;
     text-align: center;
-
 }
+/* Style de la barre de navigation */
 .navbar {
     position: fixed; /* Fixe la navbar en haut de la page */
     top: 0; /* Positionnée en haut */
@@ -14,7 +17,7 @@ body {
     z-index: 1000;  /* Placer la barre de navigation au-dessus des autres éléments */
     justify-content: space-between; /* Espace entre les éléments de la navbar */
     align-items: center; /* Centre les éléments verticalement */
-    padding: 15px 15px; /* Espacement interne autour des éléments de la navbar */
+    padding: 15px 20px; /* Espacement interne autour des éléments de la navbar */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile sous la navbar */
 }
 
@@ -42,11 +45,17 @@ body {
     cursor: pointer; /* Change le curseur au survol */
 }
 
-
 /* Espaceur pour créer un espacement vertical sous la navbar */
 .spacer {
     height: 170px; /* Hauteur de l'espace */
-    background-color: white; /* Fond blanc */
+    background-color: #ffffff ; /* Fond blanc */
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 table {
     width: 80%;
@@ -97,19 +106,31 @@ li{
     font-size: 20px;
     margin-bottom: 5px;
 }
-.graphiqueContainer {
-    margin-top: 100px;
+.containerBoutonForm {
+    display: flex;
+    justify-content: center; /* Centre le bouton à l'intérieur */
+    align-items: center; /* Centre le contenu verticalement */
+    flex-direction: column; /* Arrange les éléments verticalement */
+    margin: 20px auto; /* Ajoute un espace vertical et centre la division */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Prend toute la largeur possible */
+    max-width: 500px; /* Limite la largeur maximale */
 }
-.menu-toggle {
-    display: none;
-    background: none;
+.accessForm {
+    display: block;
+    width: 100%; /* S'assure que le bouton prend toute la largeur du conteneur */
+    max-width: 400px; /* Largeur maximale du bouton pour les écrans plus larges */
+    margin: 0 auto; /* Centre le bouton horizontalement */
+    padding: 10px;
+    background-color: #6200ea;
+    color: white;
     border: none;
-    font-size: 24px;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    padding-right: 45px;
 }
-
-/* Style responsive */
 @media (max-width: 768px) {
     .containerBouton {
         display: none; /* Cache les boutons par défaut */
@@ -131,6 +152,5 @@ li{
 
     .menu-toggle {
         display: block; /* Affiche le bouton burger */
-        right: 20px;
     }
 }

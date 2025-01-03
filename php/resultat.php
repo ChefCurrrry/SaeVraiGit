@@ -5,7 +5,7 @@ use Kirankumar\Saes3\Exceptions\BddConnectException;
 
 if(!session_id())
     session_start();
-require_once 'headerResultat.php';
+require_once '../header/headerResultat.php';
 require_once '../vendor/autoload.php';
 $bdd = new Database();
 try {
@@ -108,4 +108,4 @@ echo '<script>let soutienData = ' . json_encode($soutiens) . ';</script>';
     <h1>Nos adhérents ont-ils besoins de soutien ?</h1>
     <div id="chart"></div>
 <?php
-require_once 'footer.php';
+require_once '../header/footer.php';
