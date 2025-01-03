@@ -39,7 +39,7 @@ $users = $pdo->query("SELECT id, email, role, created_at FROM User")->fetchAll()
 </nav>
 <div class="spacer"></div>
 <h1>Gestion des Comptes</h1>
-<table >
+<table>
     <thead>
     <tr>
         <th>Email</th>

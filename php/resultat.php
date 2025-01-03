@@ -73,7 +73,7 @@ echo '<script>let soutienData = ' . json_encode($soutiens) . ';</script>';
     </nav>
         <div class="spacer"></div>
     <h1>D'où viennent nos adhérents ?</h1>
-    <table border="1">
+    <table>
         <thead>
         <tr>
             <th>Région</th>
