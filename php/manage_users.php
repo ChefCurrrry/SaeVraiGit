@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $newRole = $_POST['new_role'];
         $stmt = $pdo->prepare("UPDATE User SET role = :role WHERE id = :id");
         $stmt->execute(['role' => $newRole, 'id' => $userId]);
-
         echo "Rôle mis à jour avec succès !";
+        
     } elseif ($action === 'delete_user') {
         // Suppression de l'utilisateur
         $stmt = $pdo->prepare("DELETE FROM User WHERE id = :id");
@@ -37,9 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt2->execute(['id' => $userId]);
         $stmt3 = $pdo->prepare("DELETE FROM ARepondu WHERE user_id = :id");
         $stmt2->execute(['id' => $userId]);
-
-
         echo "Utilisateur supprimé avec succès !";
+
     } elseif ($action === 'add_user') {
         $email = $_POST['email'];
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hasher le mot de passe
