@@ -189,7 +189,7 @@ body {
 }
 
 /* Responsive : pour les écrans réduits */
-@media (max-width: 1500px) {
+@media (max-width: 768px) {
     .containerBouton {
         display: none; /* Cache les boutons par défaut */
         flex-direction: column; /* Affiche les boutons verticalement */
