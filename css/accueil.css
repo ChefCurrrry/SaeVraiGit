@@ -111,11 +111,12 @@ body {
 
 /* Style pour le titre dans la section texte */
 .textPresentation h2 {
-    font-size: 4rem; /* Taille du titre */
+    font-size: clamp(2rem, 5vw, 4rem);
     font-weight: bold; /* Met le titre en gras */
     margin-bottom: 20px; /* Ajoute un espace sous le titre */
     color: #000; /* Couleur noire pour le titre */
     font-family: Arial, serif;
+    text-align: center;
 }
 
 /* Conteneur principal */
@@ -188,7 +189,7 @@ body {
 }
 
 /* Responsive : pour les écrans réduits */
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
     .containerBouton {
         display: none; /* Cache les boutons par défaut */
         flex-direction: column; /* Affiche les boutons verticalement */
@@ -215,11 +216,23 @@ body {
         padding: 20px; /* Réduit le padding */
     }
 
-    .videoContainer, .textPresentation {
-        max-width: 100%; /* La vidéo et le texte occupent toute la largeur */
+    .videoContainer {
+        max-width: 100%; /* La vidéo occupent toute la largeur */
+    }
+    .textPresentation {
+        max-width: 100%; /* le texte occupent toute la largeur */
+        margin-top: 70px;
     }
 
     .videoContainer iframe {
         width: 100%; /* La vidéo prend toute la largeur de l'écran */
     }
+    .action-container {
+        display: flex;
+        flex-direction: column;
+        min-height: auto; /* Laisse la hauteur s'ajuster au contenu */
+        height: auto; /* Retirer les hauteurs fixes */
+        margin-top: 1000px;
+    }
+
 }
