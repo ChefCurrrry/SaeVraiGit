@@ -76,7 +76,7 @@ section.virus {
     margin: 0; /* Supprime la marge automatique */
     padding: 20px 50px; /* Ajoute du padding pour espacer le contenu */
     width: 100%; /* Étend la section à toute la largeur de la page */
-    background-color: #c4c4c4; /* Gris foncé pour la section */
+    background-color: #ECF1F5; /* Gris foncé pour la section */
     border-radius: 0; /* Enlève le rayon de bordure pour la pleine largeur */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: Arial, serif;
@@ -223,7 +223,6 @@ section.signes {
     background-color: #3AA76D; /* Couleur de fond vert */
     padding: 80px 60px;
     min-height: 500px; /* Définir une hauteur minimale pour uniformiser */
-    margin: 20px auto;
     color: #fff; /* Texte blanc */
     width: 100%; /* Fond couvrant toute la largeur */
     box-sizing: border-box; /* Inclut le padding dans la largeur */

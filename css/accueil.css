@@ -76,7 +76,7 @@ body {
     align-items: center; /* Centre les éléments verticalement */
     padding: 40px; /* Ajoute du padding autour du conteneur */
     gap: 20px; /* Espacement entre la vidéo et le texte */
-    background-color: #d3d3d3;
+    background-color: #ECF1F5;
 }
 
 /* Style pour la colonne contenant la vidéo */
