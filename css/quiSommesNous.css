@@ -222,7 +222,11 @@ h1 {
 }
 
 #output {
-    transition: opacity 0.5s ease-in-out;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    border-radius: 5px; /* Coins arrondis */
+    margin-top: 20px; /* Un peu d'espace au-dessus du texte */
 }
 
 .fade {

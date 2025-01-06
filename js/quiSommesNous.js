@@ -38,27 +38,39 @@ boutonsInfo.forEach(boutonI => {
 })
 
 
-// Sélectionne tous les éléments ayant la classe .num (chiffres à incrémenter)
-const valeurChange = document.querySelectorAll('.num')
-// Définit un intervalle de temps pour l'incrémentation (1 ms)
-const interval = 1
-
-// Parcourt chaque élément .num
-valeurChange.forEach((valeurChange) => {
-    let valeurDebut = 0; // Définir la valeur de départ (exemple : 3000)
-    // Récupère la valeur cible (attribut data-value) à laquelle le compteur doit arriver
-    const valeurFin = parseInt(valeurChange.getAttribute('data-value'));
-    // Calcule la durée d'incrémentation (interval divisé par la valeur finale)
-    const duree = Math.floor(interval / valeurFin)
-    // Démarre un intervalle de temps pour incrémenter la valeur
-    const compteur = setInterval(function () {
-        valeurDebut += 1 // Incrémente la valeur
-        valeurChange.textContent = valeurDebut // Affiche la valeur actuelle
-
-        // Si la valeur actuelle atteint la valeur cible
-        if (valeurDebut === valeurFin) {
-            // Arrête l'incrémentation
-            clearInterval(compteur)
+let observer = new IntersectionObserver(function(entries){
+    entries.forEach(entry=>{
+        if(entry.isIntersecting) {
+            commencerAnimation(entry.target);
         }
-    }, duree) // Exécute l'incrémentation avec la durée calculée
-})
+    });
+},{
+    threshold: 0.5
+});
+
+let items = document.querySelectorAll('.num');
+
+items.forEach(function(item){
+    observer.observe(item);
+});
+
+function commencerAnimation(element){
+    const valeurChange = element;
+
+    const dureeTotale = 2000;
+
+    let valeurDebut = parseInt(valeurChange.getAttribute('data-start')) || 0;
+    let valeurFin = parseInt(valeurChange.getAttribute('data-value'));
+    let increment =(valeurFin - valeurDebut) / (dureeTotale/10);
+
+    const compteur = setInterval(function() {
+        valeurDebut += increment;
+        if(valeurDebut >= valeurFin) {
+            valeurChange.textContent = valeurFin;
+            clearInterval(compteur);
+        } else {
+            valeurChange.textContent = Math.floor(valeurDebut)
+        }
+    }, 10);
+
+}
