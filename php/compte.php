@@ -53,9 +53,9 @@ $isAdmin = $stmt2->fetchColumn() > 0;
     </nav>
     <div class="container">
         <div class="header">
-            <h1>Bienvenu sur votre espace</h1>
         </div>
         <?php if ($isAdmin): ?>
+            <h1>Bienvenu sur votre espace Administrateur</h1>
             <!-- Si l'utilisateur est administrateur, affiche uniquement le bouton des résultats -->
             <div class="containerBoutonForm">
                 <button class="accessForm" onclick="window.location.href='resultat.php';">Accédez aux Résultats</button>
@@ -64,11 +64,13 @@ $isAdmin = $stmt2->fetchColumn() > 0;
                 <button class="accessForm" onclick="window.location.href='gestionComptes.php';">Gestion des Comptes</button>
             </div>
         <?php elseif (!$hasResponded): ?>
+            <h1>Bienvenu sur votre espace Adhérent</h1>
             <!-- Si l'utilisateur n'est pas administrateur et n'a pas répondu à l'enquête -->
             <div class="containerBoutonForm">
                 <button class="accessForm" onclick="window.location.href='formulaire.php';">Accédez à l'enquête</button>
             </div>
         <?php else: ?>
+            <h1>Bienvenu sur votre espace Adhérent</h1>
             <!-- Si l'utilisateur n'est pas administrateur mais a déjà répondu à l'enquête -->
             <h2>Vous avez déjà répondu à l'enquête. Merci !</h2>
         <?php endif; ?>

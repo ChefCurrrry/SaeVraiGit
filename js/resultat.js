@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .call(d3.axisBottom(x))
         .selectAll("text")
         .style("text-anchor", "center")
-        .style("font-size", "15px");
+        .style("font-size", "13px");
 
     // Ajouter l'axe Y
     svg.append("g")
